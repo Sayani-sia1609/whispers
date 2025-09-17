@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inspire with Hope</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hform.css">
+</head>
+<body>
+  <div class="heart-icon">
+    <svg viewBox="0 0 100 100">
+      <rect x="10" y="10" width="80" height="80" rx="20" fill="#fff"/>
+      <path d="M50 70 L25 45 A15 15 0 1 1 50 35 A15 15 0 1 1 75 45 Z" fill="#f47ca2"/>
+    </svg>
+  </div>
+  <div class="form-title">Inspire others with your hope</div>
+  <form class="hope-form" onsubmit="event.preventDefault(); console.log(this.elements.hope.value);">
+    <textarea class="hope-textarea" name="hope" placeholder="Share your hope..."></textarea>
+    <button class="submit-btn" type="submit">Submit</button>
+  </form>
+  <a href="hform.html" class="card-link" style="align-self:flex-end;color:#e94d7b;font-weight:bold;text-decoration:none;font-size:1rem;">Share</a>
+  <script>
+    // Apply theme from localStorage (sync with homepage)
+    function applyThemeFromStorage() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    }
+    applyThemeFromStorage();
+  </script>
+</body>
+</html>

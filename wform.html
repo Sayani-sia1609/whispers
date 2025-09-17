@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whisper it Out</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="wform.css">
+</head>
+<body>
+  <div class="heart-icon">
+    <svg viewBox="0 0 100 100">
+      <rect x="10" y="10" width="80" height="80" rx="20" fill="#fff"/>
+      <path d="M50 70 L25 45 A15 15 0 1 1 50 35 A15 15 0 1 1 75 45 Z" fill="#f47ca2"/>
+    </svg>
+  </div>
+  <div class="form-title">Whisper it Out.</div>
+  <form class="whisper-form" onsubmit="event.preventDefault(); console.log(this.elements.whisper.value);">
+    <textarea class="whisper-textarea" name="whisper" placeholder="Let it all out..."></textarea>
+    <button class="submit-btn" type="submit">Submit</button>
+  </form>
+  <script>
+    
+    function applyThemeFromStorage() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    }
+    applyThemeFromStorage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <span>Dark</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span>Light</span>
+    </div>
+    <div class="hero-image">
+        <div class="heart-icon">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <rect x="10" y="10" width="80" height="80" rx="20" fill="#fff"/>
+                <path d="M50 70 L25 45 A15 15 0 1 1 50 35 A15 15 0 1 1 75 45 Z" fill="#f47ca2"/>
+            </svg>
+        </div>
+    </div>
+    <h1 class="hero-title">Whisper</h1>
+    <h2 class="hero-subtitle">Your Loudest Scream</h2>
+    <div class="button-row">
+        <!-- Use this for the Read Whispers button -->
+<a href="read.html">
+  <button class="main-btn">Read Whispers</button>
+</a>
+        <a href="share.html" class="main-btn" style="text-decoration:none;display:inline-block;">Share a whisper</a>
+    </div>
+    <div class="tagline">
+        <span class="highlight">You Matter</span>, Your Story Matters
+    </div>
+    <script>
+  const toggle = document.getElementById('theme-toggle');
+  // On page load, set theme from localStorage
+  function applyThemeFromStorage() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      if (toggle) toggle.checked = false;
+    } else {
+      document.body.classList.remove('dark');
+      if (toggle) toggle.checked = true;
+    }
+  }
+  applyThemeFromStorage();
+
+  // On toggle, update theme and localStorage
+  if (toggle) {
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+</script>
+</body>
+</html>

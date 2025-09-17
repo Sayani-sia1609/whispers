@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share a Whisper</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <a href="home-page.html" style="position:absolute;top:20px;left:20px;text-decoration:none;color:#e94d7b;font-weight:bold;">&#8592; Home</a>
+    <h1 class="main-title" style="color:#e94d7b;font-size:2.5rem;font-weight:bold;margin-top:60px;margin-bottom:0.5rem;letter-spacing:1px;">Start Whispering</h1>
+    <h2 class="subtitle" style="font-size:1.5rem;font-weight:400;margin-bottom:2.5rem;">You’ve got this! <span style="font-size:1.3em;vertical-align:middle;">💜✨</span></h2>
+    <div class="card-row" style="display:flex;justify-content:center;gap:40px;margin-bottom:2.5rem;flex-wrap:wrap;">
+        <div class="card" style="background:#fff;border-radius:20px;box-shadow:0 4px 24px #e94d7b22,0 1.5px 4px #f47ca244;padding:28px 24px 18px 24px;width:250px;min-height:200px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
+            <div class="card-title" style="font-size:1.15rem;font-weight:bold;color:#e94d7b;margin-bottom:10px;"><span style="font-size:1.2em;">🫶</span> Share a whisper</div>
+            <div class="card-content" style="font-size:1rem;color:#444;margin-bottom:18px;line-height:1.5;">
+                Whisper it here.<br>
+                Your pain is safe here – just truth.<br>
+                You speak, we hear.<br>
+                No need to hide.<br>
+                We’re listening.
+            </div>
+            <a href="wform.html" class="card-link" style="align-self:flex-end;color:#e94d7b;font-weight:bold;text-decoration:none;font-size:1rem;">Share</a>
+        </div>
+        <div class="card" style="background:#fff;border-radius:20px;box-shadow:0 4px 24px #e94d7b22,0 1.5px 4px #f47ca244;padding:28px 24px 18px 24px;width:250px;min-height:200px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;margin-bottom:20px;">
+            <div class="card-title" style="font-size:1.15rem;font-weight:bold;color:#e94d7b;margin-bottom:10px;"><span style="font-size:1.2em;">💜</span> Share hope</div>
+            <div class="card-content" style="font-size:1rem;color:#444;margin-bottom:18px;line-height:1.5;">
+                Breathe in hope.<br>
+                A new day begins here.<br>
+                Your feelings are valid.<br>
+                Your light is returning.<br>
+                We believe in you.
+            </div>
+            <a href="hform.html" class="card-link" style="align-self:flex-end;color:#e94d7b;font-weight:bold;text-decoration:none;font-size:1rem;">Share</a>
+        </div>
+    </div>
+    <div class="help-card" style="background:#fff;border-radius:20px;box-shadow:0 4px 24px #e94d7b22,0 1.5px 4px #f47ca244;padding:32px 24px 18px 24px;width:340px;margin:0 auto 30px auto;">
+        <div class="help-text" style="font-size:1.25rem;font-weight:500;color:#222;margin-bottom:16px;line-height:1.4;">
+            If the silence still<br>
+            lingers in your heart,<br>
+            here’s help available
+        </div>
+        <div class="help-link" style="font-size:1.1rem;font-weight:bold;display:flex;flex-direction:column;gap:8px;">
+            <span>
+                <span style="font-size:1.2em;">📞</span>
+                <a href="https://telemanas.mohfw.gov.in/" target="_blank" style="color:#6a4fc2;text-decoration:none;margin-left:6px;">
+                    National Toll-Free Helpline – Tele-MANAS
+                </a>
+            </span>
+            <span>
+                <span style="font-size:1.2em;">📞</span>
+                <a href="https://www.vandrevalafoundation.com/helpline" target="_blank" style="color:#6a4fc2;text-decoration:none;margin-left:6px;">
+                    Vandrevala Foundation Helpline
+                </a>
+            </span>
+        </div>
+    </div>
+    <script>
+  const toggle = document.getElementById('theme-toggle');
+  // On page load, set theme from localStorage
+  function applyThemeFromStorage() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    } else {
+      document.body.classList.remove('dark');
+      if (toggle) toggle.checked = false;
+    }
+  }
+  applyThemeFromStorage();
+
+  // On toggle, update theme and localStorage
+  if (toggle) {
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  }
+</script>
+</body>
+</html>

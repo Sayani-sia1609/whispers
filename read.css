@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #fff 0%, #f8b6d2 100%);
+    color: #222;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+}
+
+.header-row {
+    display: flex;
+    justify-content: center;   /* Center items horizontally */
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 24px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    /* Remove margin-right: auto; */
+}
+
+.search-input {
+    display: block;
+    margin: 0 auto 20px auto; /* Center horizontally and add bottom margin */
+    padding: 10px 18px;
+    border: 1.5px solid #f47ca2;
+    border-radius: 999px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(244, 124, 162, 0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 260px;
+    max-width: 100%;
+}
+
+.search-input:focus {
+    border-color: #e75480;
+    box-shadow: 0 2px 12px rgba(244, 124, 162, 0.18);
+}
+
+.sacred-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+    margin-top: 10px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.story-card {
+    background: #fff;
+    border: 2px solid #f8b6d2;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(244, 124, 162, 0.10);
+    padding: 24px 28px;
+    width: 100%;
+    max-width: 360px;
+    min-height: 180px;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story-card:hover {
+    box-shadow: 0 8px 24px rgba(244, 124, 162, 0.18);
+}
+
+.story-card .actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.story-card button {
+    background: none;
+    border: none;
+    color: #e75480;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+
+.story-card button:hover {
+    background: #f8b6d2;
+}
